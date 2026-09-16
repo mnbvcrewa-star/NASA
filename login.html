@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ / สมัครสมาชิก - ระบบเช่าดวงดาว</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .auth-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .auth-header h2 {
+            color: #212529;
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: #495057;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #0076df;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #0076df;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056a3;
+        }
+
+        .toggle-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.88rem;
+            color: #6c757d;
+        }
+
+        .toggle-text a {
+            color: #0076df;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .toggle-text a:hover {
+            text-decoration: underline;
+        }
+
+        #register-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-card">
+        <!-- ฟอร์มเข้าสู่ระบบ -->
+        <form id="login-form">
+            <div class="auth-header">
+                <h2>เข้าสู่ระบบ</h2>
+                <p style="font-size: 0.85rem; color: #6c757d;">กรอกข้อมูลเพื่อจัดการการเช่าดวงดาวของคุณ</p>
+            </div>
+            <div class="form-group">
+                <label for="login-email">อีเมล</label>
+                <input type="email" id="login-email" required placeholder="example@email.com">
+            </div>
+            <div class="form-group">
+                <label for="login-password">รหัสผ่าน</label>
+                <input type="password" id="login-password" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn-submit">เข้าสู่ระบบ</button>
+            <div class="toggle-text">
+                ยังไม่มีบัญชีสมาชิก? <a href="#" id="show-register">สมัครสมาชิก</a>
+            </div>
+        </form>
+
+        <!-- ฟอร์มสมัครสมาชิก -->
+        <form id="register-form">
+            <div class="auth-header">
+                <h2>สมัครสมาชิก</h2>
+                <p style="font-size: 0.85rem; color: #6c757d;">สร้างบัญชีเพื่อเริ่มต้นเช่าพื้นที่ในอวกาศ</p>
+            </div>
+            <div class="form-group">
+                <label for="reg-name">ชื่อ - นามสกุล</label>
+                <input type="text" id="reg-name" required placeholder="สมชาย สุริยะ">
+            </div>
+            <div class="form-group">
+                <label for="reg-email">อีเมล</label>
+                <input type="email" id="reg-email" required placeholder="example@email.com">
+            </div>
+            <div class="form-group">
+                <label for="reg-password">รหัสผ่าน</label>
+                <input type="password" id="reg-password" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn-submit" style="background-color: #008000;">ยืนยันการสมัคร</button>
+            <div class="toggle-text">
+                มีบัญชีสมาชิกอยู่แล้ว? <a href="#" id="show-login">เข้าสู่ระบบ</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // สลับฟอร์ม Login / Register
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        document.getElementById('show-register').addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+        });
+
+        document.getElementById('show-login').addEventListener('click', (e) => {
+            e.preventDefault();
+            registerForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        // สมัครสมาชิก -> บันทึกข้อมูลลง LocalStorage แล้วเข้าสู่ระบบให้ทันที
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
+            const password = document.getElementById('reg-password').value;
+
+            // ตรวจสอบว่าเคยสมัครไว้หรือยัง
+            if (localStorage.getItem('user_' + email)) {
+                alert('อีเมลนี้ถูกใช้งานแล้ว กรุณาเข้าสู่ระบบ');
+                return;
+            }
+
+            const userData = { name, email, password };
+            localStorage.setItem('user_' + email, JSON.stringify(userData));
+            
+            // บันทึกสถานะผู้ใช้ที่ล็อกอินอยู่ปัจจุบัน
+            localStorage.setItem('currentUser', JSON.stringify({ name: name, email: email }));
+
+            alert('สมัครสมาชิกสำเร็จ! กำลังนำท่านเข้าสู่หน้าหลัก...');
+            window.location.href = 'index.html'; // ส่งไปหน้าหลักทันที
+        });
+
+        // เข้าสู่ระบบ -> ตรวจสอบข้อมูลแล้วส่งไปหน้าหลัก
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            const storedUser = localStorage.getItem('user_' + email);
+            if (storedUser) {
+                const user = JSON.parse(storedUser);
+                if (user.password === password) {
+                    // บันทึกผู้ใช้งานปัจจุบัน
+                    localStorage.setItem('currentUser', JSON.stringify({ name: user.name, email: user.email }));
+                    alert('เข้าสู่ระบบสำเร็จ! ยินดีต้อนรับ ' + user.name);
+                    window.location.href = 'index.html'; // ส่งไปหน้าหลัก
+                } else {
+                    alert('รหัสผ่านไม่ถูกต้อง');
+                }
+            } else {
+                alert('ไม่พบอีเมลนี้ในระบบ กรุณาสมัครสมาชิก');
+            }
+        });
+    </script>
+</body>
+</html>

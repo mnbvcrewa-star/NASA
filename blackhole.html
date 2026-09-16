@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดการเช่า - หลุมดำ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* รูปภาพด้านบน */
+        .banner {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: #050505; /* ธีมมืดสนิทลึกลับ */
+        }
+
+        /* ส่วนเนื้อหา */
+        .content {
+            padding: 40px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #111111;
+            color: #ffb703;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            border: 1px solid #ffb703;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #212529;
+            margin-bottom: 10px;
+        }
+
+        .price-tag {
+            font-size: 1.8rem;
+            color: #000000;
+            font-weight: 700;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #f4f6f9;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #212529;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #495057;
+        }
+
+        .highlight-box {
+            background-color: #1a1a1a;
+            border-left: 4px solid #ffb703;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            font-style: italic;
+            color: #f1f1f1;
+        }
+
+        /* ปุ่มแอคชั่น */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-confirm {
+            background-color: #008000;
+            color: white;
+            border: none;
+        }
+
+        .btn-confirm:hover {
+            background-color: #006400;
+        }
+
+        .btn-back {
+            background-color: #e2e8f0;
+            color: #4a5568;
+            border: 1px solid #cbd5e0;
+        }
+
+        .btn-back:hover {
+            background-color: #cbd5e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- รูปภาพหลุมดำ (ระบุชื่อไฟล์ตามภาพในโฟลเดอร์ เช่น blackhole.jpg) -->
+        <img src="hawg.jpg" alt="Black Hole" class="banner">
+
+        <div class="content">
+            <span class="tag">สิ่งมหัศจรรย์แห่งเอกภพ</span>
+            <h1>หลุมดำ (Black Hole)</h1>
+            <div class="price-tag">ราคาเช่า: 99,999,999,999 บาท / ต่อคืน</div>
+
+            <p>ก้าวข้ามข้อจำกัดของกาลเวลาสัมผัสประสบการณ์เหนือจินตนาการ ณ ขอบมวลสารสุดลึกลับ พักผ่อนบนสถานีอวกาศวงแหวนโคจรความเร็วสูงนอกขอบขอบฟ้าเหตุการณ์ (Event Horizon) ชมการบิดเบี้ยวของแสงและกาลเวลาที่ช้าลงตามทฤษฎีสัมพัทธภาพ ปลอดภัยด้วยระบบต้านแรงไทดัล (Anti-Tidal Gravity) ระดับสูง</p>
+
+            <div class="highlight-box">
+                "ไฮไลท์เด็ด: ชมจานพอกพูนมวล (Accretion Disk) สว่างไสวเปล่งแสงระยิบระยับล้อมรอบความมืดมิดอันสมบูรณ์แบบ พร้อมสัมผัสสภาวะเวลานานกว่าบนโลก (1 ชั่วโมง = 7 ปีบนโลก)"
+            </div>
+
+            <h3>📊 ข้อมูลจำเพาะและสภาพแวดล้อม</h3>
+            <ul>
+                <li><strong>คุณลักษณะ:</strong> เทหวัตถุที่มีแรงดึงดูดมหาศาล แม้กระทั่งแสงก็ไม่สามารถหลบหนีออกมาได้</li>
+                <li><strong>ปรากฏการณ์เวลา:</strong> เกิดภาวะเวลาขยายตัวจากแรงโน้มถ่วง (Gravitational Time Dilation) อย่างรุนแรง</li>
+                <li><strong>ที่พักอาศัย:</strong> สถานีพักโคจรปลอดภัยนอกรัศมีสวาร์ตสชิลด์ (Schwarzschild Radius)</li>
+                <li><strong>เทคโนโลยีความปลอดภัย:</strong> ระบบวาร์ปฉุกเฉินสปินนิ่งพร้อมเกราะสะท้อนคลื่นความโน้มถ่วง</li>
+            </ul>
+
+            <h3>📍 พิกัดท่องเที่ยวห้ามพลาดรอบหลุมดำ</h3>
+            <ul>
+                <li><strong>Event Horizon Edge:</strong> จุดชมวิวขอบขอบฟ้าเหตุการณ์ จุดที่มืดมิดที่สุดและสวยงามที่สุดในจักรวาล</li>
+                <li><strong>Accretion Disk Ring:</strong> ชมการหมุนวนของกลุ่มแก๊สและความร้อนสูงสว่างไสวรอบหลุมดำ</li>
+                <li><strong>Gravitational Lensing View:</strong> จุดถ่ายรูปยอดฮิตชมปรากฏการณ์เลนส์ความโน้มถ่วงที่บิดเบี้ยวภาพดาว 배경ด้านหลัง</li>
+            </ul>
+
+            <!-- ปุ่มกดยืนยัน หรือ ย้อนกลับ -->
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-back">⬅️ ย้อนกลับหน้าหลัก</a>
+                <button class="btn btn-confirm" onclick="alert('ยินดีต้อนรับสู่ทริปท่องกาลเวลา! สถานีอวกาศได้ทำการปรับตั้งระบบชะลอเวลาและเตรียมพร้อมต้อนรับคุณเข้าสู่ขอบขอบฟ้าเหตุการณ์แล้ว 🕳️✨')">ยืนยันการเช่าดวงดาว 🚀</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

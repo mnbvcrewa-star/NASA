@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดการเช่า - ดวงจันทร์</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* รูปภาพด้านบน */
+        .moon-banner {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: #000;
+        }
+
+        /* ส่วนเนื้อหา */
+        .content {
+            padding: 40px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #0076df;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #212529;
+            margin-bottom: 10px;
+        }
+
+        .price-tag {
+            font-size: 1.8rem;
+            color: #0076df;
+            font-weight: 700;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #f4f6f9;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #212529;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #495057;
+        }
+
+        .highlight-box {
+            background-color: #eef7ff;
+            border-left: 4px solid #0076df;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            font-style: italic;
+            color: #333;
+        }
+
+        /* ปุ่มแอคชั่น */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-confirm {
+            background-color: #008000;
+            color: white;
+            border: none;
+        }
+
+        .btn-confirm:hover {
+            background-color: #006400;
+        }
+
+        .btn-back {
+            background-color: #e2e8f0;
+            color: #4a5568;
+            border: 1px solid #cbd5e0;
+        }
+
+        .btn-back:hover {
+            background-color: #cbd5e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="Moon.jpg" alt="Moon" class="moon-banner">
+
+        <div class="content">
+           
+            <h1>ดวงจันทร์ (The Moon)</h1>
+            <div class="price-tag">ราคาเช่า: 1,000,000 บาท / ต่อคืน</div>
+
+            <p>เปลี่ยนบรรยากาศไปนอนรับลมสุญญากาศ วิวโลกสวยชัดเจน 360 องศา หลีกหนีความวุ่นวายบนโลก ไปนอนนับดาวแบบไร้เสียงรบกวน สัมผัสประสบการณ์เดินตัวลอยด้วยแรงโน้มถ่วงต่ำ และดื่มด่ำกับวิวโลกดวงใหญ่สีน้ำเงินระยิบระยับตลอดค่ำคืน พักผ่อนในโดมสุญญากาศสุดหรูที่ปรับอุณหภูมิอุ่นสบาย</p>
+
+            <div class="highlight-box">
+                "ไฮไลท์เด็ด: นั่งมอง โลก ดวงสีน้ำเงินของเราลอยเด่นอยู่บนท้องฟ้า ซึ่งจะสว่างและใหญ่กว่าดวงจันทร์ที่เรามองจากโลกถึง 4 เท่า!"
+            </div>
+
+            <h3>📊 ข้อมูลจำเพาะและสภาพแวดล้อม</h3>
+            <ul>
+                <li><strong>ระยะห่างจากโลก:</strong> ประมาณ 384,400 กิโลเมตร (ใช้เวลาเดินทางประมาณ 3 วัน)</li>
+                <li><strong>แรงโน้มถ่วงต่ำ:</strong> มีแรงดึงดูดเพียง 1 ใน 6 ของโลก (เดินตัวลอยกระโดดดึ๋งๆ ได้สนุกสนาน)</li>
+                <li><strong>ชั้นบรรยากาศ:</strong> เป็นสุญญากาศ ท้องฟ้าเป็นสีดำสนิท มองเห็นดวงดาวชัดเจนไม่มีแสงกวน</li>
+                <li><strong>อุณหภูมิ:</strong> ตอนกลางวัน 120°C / ตอนกลางคืน -130°C (ภายในโดมที่พักปรับอุณหภูมิอุ่นสบายอัตโนมัติ)</li>
+            </ul>
+
+            <h3>📍 สถานที่ท่องเที่ยวห้ามพลาดบนดวงจันทร์</h3>
+            <ul>
+                <li><strong>ทะเลดวงจันทร์ (Lunar Maria):</strong> บริเวณพื้นที่ราบเรียบนุ่มนวล เหมาะแก่การตั้งแคมป์</li>
+                <li><strong>หลุมอุกกาบาตไทโค (Tycho Crater):</strong> หลุมอุกกาบาตขนาดยักษ์ ถ่ายรูปมุมสูงอลังการมาก</li>
+                <li><strong>จุดลงจอดอพอลโล 11:</strong> พื้นที่ประวัติศาสตร์ รอยเท้าแรกของ นีล อาร์มสตรอง ที่ยังคงอยู่เหมือนเดิมเป๊ะ</li>
+            </ul>
+
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-back">⬅️ ย้อนกลับหน้าหลัก</a>
+                <button class="btn btn-confirm" onclick="alert('ขอบคุณที่สนใจเช่าดวงจันทร์! เจ้าหน้าที่ NASA กำลังจัดเตรียมยานอวกาศเพื่อติดต่อคุณกลับไป')">ยืนยันการเช่าดวงดาว 🚀</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

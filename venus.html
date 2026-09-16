@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดการเช่า - ดาวศุกร์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Prompt', sans-serif; }
+        body { background-color: #dae1eb; color: #060706; line-height: 1.6; padding: 40px 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(223, 17, 17, 0.08); overflow: hidden; border: 1px solid rgba(0,0,0,0.05); }
+        .banner { width: 100%; height: 400px; object-fit: cover; background-color: #3d2200; }
+        .content { padding: 40px; }
+        .tag { display: inline-block; background-color: #9c9e08; color: white; padding: 4px 12px; border-radius: 50px; font-size: 0.85rem; margin-bottom: 15px; }
+        h1 { font-size: 2.2rem; color: #000000; margin-bottom: 10px; }
+        .price-tag { font-size: 1.8rem; color: #070707; font-weight: 700; margin-bottom: 25px; border-bottom: 2px solid #f4f6f9; padding-bottom: 15px; }
+        h3 { font-size: 1.2rem; color: #131414; margin-top: 25px; margin-bottom: 10px; }
+        ul { padding-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 8px; color: #495057; }
+        .highlight-box { background-color: #fff9f0; border-left: 4px solid #e0a96d; padding: 15px; border-radius: 0 8px 8px 0; margin: 20px 0; font-style: italic; color: #333; }
+        .action-buttons { display: flex; gap: 15px; margin-top: 35px; }
+        .btn { flex: 1; padding: 14px; font-size: 1.1rem; font-weight: 600; border-radius: 6px; cursor: pointer; text-align: center; text-decoration: none; transition: all 0.2s ease; }
+        .btn-confirm { background-color: #008000; color: white; border: none; }
+        .btn-confirm:hover { background-color: #006400; }
+        .btn-back { background-color: #e2e8f0; color: #4a5568; border: 1px solid #cbd5e0; }
+        .btn-back:hover { background-color: #cbd5e0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="ven.jpg" alt="Venus" class="banner">
+        <div class="content">
+            <span class="tag">ดาวเคราะห์หิน</span>
+            <h1>ดาวศุกร์ (Venus)</h1>
+            <div class="price-tag">ราคาเช่า: 18,000,000 บาท / ต่อคืน</div>
+            <p>เยือนดาวศุกร์ด้วยยานลอยฟ้าสไตล์ตึกก้อนเมฆ (Cloud City Resort) ที่ลอยอยู่เหนือชั้นบรรยากาศกรดกำมะถัน ชมทิวทัศน์ก้อนเมฆสีทองสะท้อนแสงแดดอันวิจิตรตระการตา</p>
+            <div class="highlight-box">
+                "ไฮไลท์เด็ด: พักผ่อนในรีสอร์ตลอยฟ้าความสูง 50 กม. อุณหภูมิสบาย 25°C ชมวิวท้องฟ้าสีส้มทอง"
+            </div>
+            <h3>📊 ข้อมูลจำเพาะและสภาพแวดล้อม</h3>
+            <ul>
+                <li><strong>ประเภทดาว:</strong> ดาวเคราะห์หิน (Terrestrial Planet)</li>
+                <li><strong>ระยะห่างจากดวงอาทิตย์:</strong> 0.72 AU</li>
+                <li><strong>บรรยากาศ:</strong> หนักแน่น คลุมด้วยเมฆกรดส้มทองสวยงาม</li>
+            </ul>
+            <h3>📍 พิกัดท่องเที่ยวห้ามพลาด</h3>
+            <ul>
+                <li><strong>ภูเขาไฟหม่าตตระหง่าน (Maat Mons):</strong> ภูเขาไฟที่สูงที่สุดบนดาวศุกร์</li>
+                <li><strong>ทุ่งเมฆสีทองชั้นบน:</strong> จุดชมวิวอาทิตย์อัสดงลอยฟ้าที่สว่างที่สุด</li>
+            </ul>
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-back">⬅️ ย้อนกลับหน้าหลัก</a>
+                <button class="btn btn-confirm" onclick="alert('ยินดีต้อนรับสู่รีสอร์ตลอยฟ้าดาวศุกร์! ☁️✨')">ยืนยันการเช่าดวงดาว 🚀</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

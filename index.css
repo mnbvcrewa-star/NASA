@@ -1,0 +1,320 @@
+/* ล้างค่าเริ่มต้นพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ส่วนหัวเว็บไซต์ */
+header {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #0076df;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* แถบเมนูบน */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #ffffff; 
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000; 
+    font-weight: 500; /* แก้ไขค่าจาก 500000 ให้ถูกต้อง */
+    font-size: 0.95rem;
+    padding: 4px 8px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #0076df;
+}
+
+/* หัวข้อแนะนำขวา */
+.section-title {
+    text-align: left; /* เปลี่ยนมาชิดซ้ายเข้ากับ Grid ฝั่งขวา */
+    margin-bottom: 25px;
+    color: #212529;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   จัดโครงสร้างหน้าเว็บเป็น 2 คอลัมน์ (ซ้าย-ขวา)
+   ========================================== */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex; 
+    gap: 30px; 
+    align-items: flex-start;
+}
+
+/* คอลัมน์ฝั่งซ้าย (Sidebar เมนูเรียงตัวลงมาด้านล่าง) */
+.sidebar-left {
+    flex: 0 0 280px; 
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+/* คอลัมน์ฝั่งขวา */
+.content-right {
+    flex: 1; 
+}
+
+/* ระบบ Grid สำหรับดวงดาวขวามือ 3 คอลัมน์กำลังสวยงาม */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px;                                 
+    justify-content: center;
+    margin-bottom: 40px;               
+}
+
+/* การ์ดสินค้าแต่ละชิ้น */
+article {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;  
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 70, 150, 0.1);
+}
+
+article img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain; 
+    margin: 15px 0;
+}
+
+article h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 8px;
+}
+
+article p {
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 12px;
+    flex-grow: 1; /* ช่วยดันปุ่มกับราคาให้อยู่ระนาบเดียวกัน */
+}
+
+article .price {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0076df; /* เปลี่ยนเป็นสีน้ำเงินให้เด่นขึ้น */
+    margin-bottom: 15px;
+}
+
+/* ปุ่มเช่า */
+article button {
+    background-color: #008000; 
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    width: 100%; /* ปุ่มกว้างเต็มการ์ดคลิกง่าย */
+    transition: background-color 0.2s ease;
+}
+
+article button:hover {
+    background-color: #006400;
+}
+
+/* กล่องฝั่งซ้าย (กาแล็กซี และ หมวดหมู่) */
+.galaxy-box, .categories-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: left;
+    width: 100%;
+}
+
+.galaxy-box h3, .categories-box h3 { 
+    margin-bottom: 12px; 
+    color: #212529;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-bottom: 2px solid #f4f6f9;
+    padding-bottom: 8px;
+}
+
+/* เมนูกาแล็กซีแนวตั้งเรียงลงมา */
+.galaxy-box ul { 
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;
+}
+
+.galaxy-box ul li a { 
+    display: block;
+    text-decoration: none;
+    background-color: #f4f6f9;
+    color: #0076df;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.galaxy-box ul li a:hover { 
+    background-color: #0076df;
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+.categories-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.categories-box ul li {
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+/* ==========================================
+   ส่วนของช่องค้นหาดวงดาว (Search Bar)
+   ========================================== */
+.search-container {
+    max-width: 1200px;
+    margin: 25px auto 5px auto;
+    padding: 0 20px;
+}
+
+.search-box {
+    display: flex;
+    background: #ffffff;
+    border: 2px solid #0076df; 
+    border-radius: 50px; 
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 118, 223, 0.1);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    padding: 14px 25px;
+    font-size: 1rem;
+    color: #333333;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #0076df;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-box button:hover {
+    background-color: #0056a3;
+}
+
+/* ส่วน Footer */
+footer {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 40px;
+    font-size: 0.95rem;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Responsive รองรับแท็บเล็ตและมือถือ */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .sidebar-left {
+        width: 100%;
+        flex: none;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .search-box input {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    .search-box button {
+        padding: 0 15px;
+        font-size: 0.9rem;
+    }
+}
